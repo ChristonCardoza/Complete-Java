@@ -1,0 +1,31 @@
+package christu.deadman.springtutorials;
+
+public class AnotherStudent {
+	
+	private int studentId;
+	private MathCheat MathCheat;
+	private ScienceCheat ScienceCheat;
+
+	public void setScienceCheat(ScienceCheat scienceCheat) {
+		ScienceCheat = scienceCheat;
+		System.out.println("The ScienceCheat Object is created from setter");
+	}
+
+	public void setMathCheat(MathCheat mathCheat) {
+		this.MathCheat = mathCheat;
+		System.out.println("The MathCheat Object is created from setter");
+	}
+
+	public void setstudentId(int studentId) {
+		this.studentId = studentId;
+		System.out.println("The setter method for ID is created");
+	}
+
+	public void cheating() {
+
+		MathCheat.mathCheat();
+		ScienceCheat.scienceCheat();
+		System.out.println("The student Id is : " + studentId);
+	}
+
+}

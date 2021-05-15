@@ -1,0 +1,13 @@
+package christu.deadman.springtutorials;
+
+public class Candidate {
+	public static void main(String[] args) {
+		
+		Student student = new Student();
+		MathCheat cheat = new MathCheat();
+		student.setMathCheat(cheat);
+		student.cheating();
+		
+	}
+
+}

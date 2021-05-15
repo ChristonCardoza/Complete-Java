@@ -1,0 +1,30 @@
+package christu.deadman.springtutorials;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Human {
+	
+	@Autowired
+	private Heart heart;
+
+//	public void setHeart(Heart heart) {
+//		this.heart = heart;
+//	}
+	
+	public Human(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void startPumping() {
+		
+		 if( heart == null){
+			 System.out.println("You are Dead!!!");
+		 }
+		 else {
+			 heart.pump();
+		 }
+	}
+
+
+
+}

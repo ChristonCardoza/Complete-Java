@@ -1,0 +1,12 @@
+package christu.deadman.springtutorials;
+
+public class Body {
+	public static void main(String[] args) {
+		
+		Human human = new Human();
+		Heart heart = new Heart();
+		human.setHeart(heart);
+		human.startPumping();
+	}
+
+}

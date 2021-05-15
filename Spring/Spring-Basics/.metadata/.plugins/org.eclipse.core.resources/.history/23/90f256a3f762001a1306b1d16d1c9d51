@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--         
+  <bean id = "heart" class = "christu.deadman.springtutorials.Heart"></bean>
+  <bean id = "human" class = "christu.deadman.springtutorials.Human">
+  	<property name="heart" ref= "heart"></property>
+  </bean> 
+   --> 
+   
+   <bean id = "heart" class = "christu.deadman.springtutorials.Heart"></bean>
+  <bean id = "human" class = "christu.deadman.springtutorials.Human" autowire="byName"></bean> 
+    
+    
+</beans>
