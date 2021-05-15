@@ -1,0 +1,8 @@
+package christu.deadman.springtutorials;
+
+public class MathCheat {
+	public void mathCheat() {
+		
+		System.out.println(" The Math Cheats are created");
+	}
+}

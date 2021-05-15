@@ -1,0 +1,9 @@
+package christu.deadman.springtutorials;
+
+public class ScienceCheat {
+	
+	public void scienceCheat() {
+		System.out.println("The Science Cheats are created");
+	}
+
+}
