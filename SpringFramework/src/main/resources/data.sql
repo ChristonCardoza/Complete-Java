@@ -1,11 +1,20 @@
-insert into todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
-values(10001,'christu', 'Get AWS Certified', CURRENT_DATE(), false);
+insert into user_details(id,birth_date,name)
+values(10001, current_date(), 'Ranga');
 
-insert into todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
-values(10002,'christu', 'Get Azure Certified', CURRENT_DATE(), false);
+insert into user_details(id,birth_date,name)
+values(10002, current_date(), 'Ravi');
 
-insert into todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
-values(10003,'christu', 'Get GCP Certified', CURRENT_DATE(), false);
+insert into user_details(id,birth_date,name)
+values(10003, current_date(), 'Sathish');
 
-insert into todo (ID, USERNAME, DESCRIPTION, TARGET_DATE, DONE)
-values(10004,'christu', 'Learn DevOps', CURRENT_DATE(), false);
+insert into post(id,description,user_id)
+values(20001,'I want to learn AWS', 10001);
+
+insert into post(id,description,user_id)
+values(20002,'I want to learn DevOps', 10001);
+
+insert into post(id,description,user_id)
+values(20003,'I want to Get AWS Certified', 10002);
+
+insert into post(id,description,user_id)
+values(20004,'I want to learn Multi Cloud', 10002);
