@@ -1,3 +1,5 @@
+package Map.HashTable;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,9 +11,9 @@ public class myProperties {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 //		Properties myProperty = new Properties();
-		
+
 		File file = new File("F:/Java-Collection/Map/HashTable/myProperty.properties");
 		FileInputStream fis;
 		FileOutputStream fos;
@@ -29,8 +31,8 @@ public class myProperties {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
+
 	}
 
 }
