@@ -11,7 +11,7 @@
 * There should never be more than one reason for a class to change
 * Reason for change:
   * For Rest service when request protocol changes, request body or response body changes, values of authentication changes or input field are changed
-  
+
 ### Open Close Principle
 * Software Entities(Classed, Methods, Modules etc.) should be open for extension, but closed for modification
   * Open for Extension: Extend existing behaviour (can derive from base class and override methods)
@@ -50,7 +50,7 @@
 #### Builder
 - We have a complex process to construct an object involving multiple steps, then builder design patterns can help us
 - In builder, we remove the logic related to object construction from 'client' code and abstract it in separate classes
-- Steps: 
+- Steps:
   * Identify the 'parts' of the product and provide method to create these parts
   * It should provide method to 'assemble' or build the product/object
   * It must provide way/method to get fully build object out. Optionally builder can keep reference to an product it has built so the same can be returned again in future
@@ -128,3 +128,29 @@
   * Method to acquire and release object should be provided and pool should reset cached object before giving them out.
 
 ![ObjectPool](Images/objectPool.png)
+
+### Structural Design Pattern
+
+- Structural patterns deals with how classes and objects are arranged or composed
+- Commonly used patterns
+  * Adapter
+  * Bridge
+  * Decorator
+  * Composite
+  * Facade
+  * Flyweight
+  * Proxy
+
+#### Adapter
+- We have an existing object which provides the functionality that client needs, But client code can't use this object because it expects an object with difference interface
+- Using adapter design pattern we make this existing object work with client by adapting the object to client's expected interface
+- The pattern is also called as wrapper as it 'wrap' existing object
+- There are mainly two adapter implementation, Object Adapter and Class Adapter
+- An Object Adapter should take adapttee as an argument in constructor or as a less preferred solution, You can instantiate it in the constructor thus tightly coupling with a specific adapter
+- A Class Adapter also called as 'Two-Way-Adapter', Since it can stand in for both the target interface and for the adapter that is we can use object of adapter where either target interface is expected as well as where an adapter object is expected
+- Using target interface and adapter class to extend out adapter we can create 'Class Adapter' in Java. However, it creates an object which expose un-related methods which pollutes the code. Avoid class adapter
+- We start by creating  Class Adapter
+  * Adapter must implement the interface expected by client
+  * First we are going to try out a class adapter by also extending our existing class
+  * In Class Adapter implementation we are simply going to forward the method inheritance from adapttee
+  * Next for Object Adapter, we are only giving to implement target interface and accept adaptee as constructor argument in adapter ie make use of composition
