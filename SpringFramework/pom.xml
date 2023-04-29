@@ -60,7 +60,7 @@
             <scope>runtime</scope>
         </dependency>
 
-<!--        Todo App -->
+<!--                                                                                                            Todo App                                                       -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -70,7 +70,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -116,7 +115,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-<!--        restapi  -->
+<!--                                                                                                             restapi                                                       -->
         <dependency>
             <groupId>org.springframework.hateoas</groupId>
             <artifactId>spring-hateoas</artifactId>
@@ -139,7 +138,7 @@
 <!--        </dependency>-->
 
 
-<!--        Spring Security-->
+<!--                                                                                                     Spring Security                                                       -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -152,7 +151,14 @@
             <version>2.3.3.RELEASE</version>
         </dependency>
 
-        <!--        Others  -->
+<!--                                                                                                Full-Stack Todo                                                           -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+
+<!--                                                                                                              Others                                                       -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
