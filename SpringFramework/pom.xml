@@ -24,6 +24,9 @@
         <module>spring05restapi</module>
         <module>spring06security</module>
         <module>spring07FullStackTodo</module>
+        <module>spring08Validation</module>
+        <module>spring09RestTemplate</module>
+        <module>spring10RestDoc</module>
     </modules>
 
 </project>
