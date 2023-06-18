@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.intro</groupId>
+	<artifactId>Data01IntroToHibernate</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Data01IntroToHibernate</name>
+	<description>Data01IntroToHibernate</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>h2</id>
+            <dependencies>
+                <dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!--			<plugin>-->
+            <!--				<groupId>org.liquibase</groupId>-->
+            <!--				<artifactId>liquibase-maven-plugin</artifactId>-->
+            <!--				<version>4.2.2</version>-->
+            <!--				<configuration>-->
+            <!--					<url>jdbc:mysql://127.0.0.1:3306/bookdb?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</url>-->
+            <!--					<username>bookadmin</username>-->
+            <!--					<password>password</password>-->
+            <!--					<outputChangeLogFile>changelog.xml</outputChangeLogFile>-->
+            <!--					<changeSetAuthor>JT</changeSetAuthor>-->
+            <!--					<changelogSchemaName>bookdb</changelogSchemaName>-->
+            <!--				</configuration>-->
+            <!--				<dependencies>-->
+            <!--					<dependency>-->
+            <!--						<groupId>mysql</groupId>-->
+            <!--						<artifactId>mysql-connector-java</artifactId>-->
+            <!--						<version>${mysql.version}</version>-->
+            <!--					</dependency>-->
+            <!--				</dependencies>-->
+            <!--			</plugin>-->
+
+        </plugins>
+    </build>
+
+</project>
