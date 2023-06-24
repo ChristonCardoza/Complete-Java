@@ -24,6 +24,8 @@
         <module>Data03JdbcTemplate</module>
         <module>Data04HibernateDAO</module>
         <module>Data05SpringDataJPA</module>
+        <module>Data06PagingNSorting</module>
+        <module>Data07OrderService</module>
     </modules>
 
 </project>
