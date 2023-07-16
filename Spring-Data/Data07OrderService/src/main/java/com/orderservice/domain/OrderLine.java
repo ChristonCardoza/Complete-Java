@@ -43,23 +43,23 @@ public class OrderLine extends BaseEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof OrderLine)) return false;
         if (!super.equals(o)) return false;
 
         OrderLine orderLine = (OrderLine) o;
 
-        if (!Objects.equals(quantityOrdered, orderLine.quantityOrdered))
+        if (getQuantityOrdered() != null ? !getQuantityOrdered().equals(orderLine.getQuantityOrdered()) : orderLine.getQuantityOrdered() != null)
             return false;
-        if (!Objects.equals(orderHeader, orderLine.orderHeader))
+        if (getOrderHeader() != null ? !getOrderHeader().equals(orderLine.getOrderHeader()) : orderLine.getOrderHeader() != null)
             return false;
-        return Objects.equals(product, orderLine.product);
+        return getProduct() != null ? getProduct().equals(orderLine.getProduct()) : orderLine.getProduct() == null;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + (quantityOrdered != null ? quantityOrdered.hashCode() : 0);
-        result = 31 * result + (product != null ? product.hashCode() : 0);
+        result = 31 * result + (getQuantityOrdered() != null ? getQuantityOrdered().hashCode() : 0);
+        result = 31 * result + (getProduct() != null ? getProduct().hashCode() : 0);
         return result;
     }
 }
