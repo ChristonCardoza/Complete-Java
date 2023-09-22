@@ -38,6 +38,19 @@ public class DataLoadTest {
     ProductRepository productRepository;
 
     @Test
+    void testDBLock(){
+        Long id = 1l;
+
+        OrderHeader orderHeader = orderHeaderRepository.findById(id).get();
+
+        Address billTo = new Address();
+        billTo.setAddress("Bill me");
+        orderHeaderRepository.saveAndFlush(orderHeader);
+
+        System.out.println("I updated the order");
+    }
+
+    @Test
     void testN_PlusOneProblem() {
 
         Customer customer = customerRepository.findCustomerByCustomerNameIgnoreCase(TEST_CUSTOMER).get();
@@ -58,7 +71,7 @@ public class DataLoadTest {
         System.out.println("Customer Name is: " + orderHeader.getCustomer().getCustomerName());
     }
 
-    @Disabled
+//    @Disabled
     @Rollback(value = false)  // true -> data won't persist
     @Test
     void testDataLoader() {
