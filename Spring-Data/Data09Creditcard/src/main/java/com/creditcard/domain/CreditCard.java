@@ -1,12 +1,10 @@
 package com.creditcard.domain;
 
 import com.creditcard.interceptors.EncryptedString;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@EntityListeners(CreditCardJPACallback.class)
 public class CreditCard {
 
     @Id
