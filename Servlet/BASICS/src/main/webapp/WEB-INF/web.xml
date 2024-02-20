@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+
+<!--    welcome file-->
+
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+
+<!--    servlet declaration-->
+
+    <servlet>
+        <servlet-name>first</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_01_basic.FirstServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_01_basic.SecondServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>third</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_01_basic.ThirdServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_01_basic.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_01_basic.Success</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>s1</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_02_attr.S1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>s2</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_02_attr.S2</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.cookie.Servlet1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.cookie.Servlet2</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>registeredCookie</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.cookie.Registered</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>urlWritingServlet1</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.urlRewrite.Servlet1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>urlWritingServlet2</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.urlRewrite.Servlet2</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>hiddenFormFieldServlet1</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.hiddenFormField.Servlet1</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>hiddenFormFieldServlet2</servlet-name>
+        <servlet-class>org.christu.servlet.servlet_03_sessionTracking.hiddenFormField.Servlet2</servlet-class>
+    </servlet>
+
+
+<!--    mapping-->
+
+    <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/servlet_01_basic/first</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/servlet_01_basic/second</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>third</servlet-name>
+        <url-pattern>/servlet_01_basic/third</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/servlet_01_basic/registerServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/servlet_01_basic/success</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>s1</servlet-name>
+        <url-pattern>/servlet_02_attr/s1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>s2</servlet-name>
+        <url-pattern>/servlet_02_attr/s2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/cookie/servlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/cookie/servlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>registeredCookie</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/cookie/registeredCookie</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>urlWritingServlet1</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/urlRewrite/urlWritingServlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>urlWritingServlet2</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/urlRewrite/urlWritingServlet2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>hiddenFormFieldServlet1</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/hiddenFormField/hiddenFormFieldServlet1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>hiddenFormFieldServlet2</servlet-name>
+        <url-pattern>/servlet_03_sessionTracking/hiddenFormField/hiddenFormFieldServlet2</url-pattern>
+    </servlet-mapping>
+</web-app>

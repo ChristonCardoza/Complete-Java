@@ -26,6 +26,9 @@
         <module>Data05SpringDataJPA</module>
         <module>Data06PagingNSorting</module>
         <module>Data07OrderService</module>
+        <module>Data08LegacyDBMapping</module>
+        <module>Data09Creditcard</module>
+        <module>Data10MultiDataSource</module>
     </modules>
 
 </project>
